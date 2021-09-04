@@ -1,0 +1,39 @@
+<div class='mt-4'>
+	<h3>Sửa khoá học</h3>
+
+	<form method='POST' action='/courses/{{course._id}}?_method=PUT'>
+		<div class='form-group'>
+			<label for='name'>Tên khoá học</label>
+			<input
+				type='text'
+				class='form-control'
+				id='name'
+				name='name'
+				value='{{course.name}}'
+				placeholder='Nhập tên khoá học'
+			/>
+		</div>
+		<div class='form-group'>
+			<label for='description'>Mô tả</label>
+			<textarea
+				class='form-control'
+				id='description'
+				name='description'
+				placeholder='Nhập mô tả'
+			>{{course.description}}</textarea>
+		</div>
+		<div class='form-group'>
+			<label for='videoId'>Video id</label>
+			<input
+				type='text'
+				class='form-control'
+				id='videoId'
+				name='videoId'
+				value='{{course.videoId}}'
+				placeholder='Nhập video id'
+			/>
+		</div>
+
+		<button type='submit' class='btn btn-primary'>Sửa khoá học</button>
+	</form>
+</div>
